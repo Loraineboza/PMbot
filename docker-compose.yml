@@ -1,0 +1,10 @@
+services:
+  fitline-pm-bot:
+    build: .
+    container_name: fitline-pm-bot
+    restart: unless-stopped
+    env_file:
+      - .env
+    volumes:
+      - ./data:/app/data
+

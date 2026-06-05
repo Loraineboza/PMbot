@@ -1,0 +1,17 @@
+[Unit]
+Description=FitLine PM Telegram Bot
+After=network.target
+
+[Service]
+Type=simple
+WorkingDirectory=/opt/fitline_pm_bot
+EnvironmentFile=/opt/fitline_pm_bot/.env
+ExecStart=/opt/fitline_pm_bot/.venv/bin/python /opt/fitline_pm_bot/main.py
+Restart=always
+RestartSec=5
+User=fitlinebot
+Group=fitlinebot
+
+[Install]
+WantedBy=multi-user.target
+
